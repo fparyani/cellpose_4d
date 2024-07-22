@@ -19,15 +19,15 @@
 ## Usage Example
 
 
-``python
+```python
 python /pmglocal/fp2409/rotation_proj/analysis/preprocessing_cellpose/z_projection/run_cellpose_kernel_zcompression.py --czi_file /pmglocal/fp2409/embryo_img_kni_knrl/embryo03/ --output_dir /pmglocal/fp2409/rotation_proj/analysis/preprocessing_cellpose/z_projection/out/ --embryo_name embryo_3 --kernel 5 --z_compression max --cellpose_model_dimension 3D
-``
+```
 
 ## Visualization/Analysis Script Usage
 
 Load in masks output and czi image from above python script
 
-``python
+```python
 
 all_img_nuc = ReadData(czi_file_dir)
 
@@ -36,12 +36,12 @@ fname = os.path.join(output_dir, 'embryo_3_cellpose3D_nuclei_kernel5_masks.pkl')
 with open(fname, 'rb') as f:
   masks3D_kern5 = pickle.load(f)
 masks3D_kern5 = np.array(masks3D_kern5)
-``
+```
 
 
 ### Visualization of z_stack gif via `generate_4D_gif`
 
-``
+```python
 generate_4D_gif(all_img_nuc[:,:,100:170,100:170], masks = masks3D_kern3[:,:,100:170,100:170],
                   pre_file_name = 'cellpose3D_kern3_subset', 
                   path = '/output/gif/')
@@ -51,7 +51,7 @@ generate_4D_gif(all_img_nuc[:,:,100:170,100:170], masks = masks3D_kern3[:,:,100:
 generate_4D_gif_double(all_img_nuc[:,:,100:170,100:170], masks = masks3D_kern3[:,:,100:170,100:170], masks2 = masks3D_kern5[:,:,100:170,100:170],
                   pre_file_name = 'cellpose3D_kern3_v_kern5_subset', 
                   path = '/output/gif/')
-``
+```
 
 
 ### Volume measure 
