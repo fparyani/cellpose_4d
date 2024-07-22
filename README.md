@@ -2,19 +2,19 @@
 
 ## Argument Description
 
-`czi_file` file directory for where relevant czi files are placed. If there are multiple it will stitch them to together into one movie
+`--czi_file` file directory for where relevant czi files are placed. If there are multiple it will stitch them to together into one movie
 
-`output_dir` is where you want the masks to be saved
+`--output_dir` is where you want the masks to be saved
 
-`embryo_name` is a name you give to the file to be saved
+`--embryo_name` is a name you give to the file to be saved
 
-`kernel` determines the size of the kernel to apply over x,y plane
+`--kernel` determines the size of the kernel to apply over x,y plane
 
-`cellpose_model` determines which model to run, by default it is `nuclei` but optional arguments include `cyto` which runs the cytoplasm model. Optional argument
+`--cellpose_model` determines which model to run, by default it is `nuclei` but optional arguments include `cyto` which runs the cytoplasm model. Optional argument
 
-`z_compression` determines which compression to z_stack compression to apply. Options are `mean`, `max` , or `all` for both
+`--z_compression` determines which compression to z_stack compression to apply. Options are `mean`, `max` , or `all` for both
 
-`cellpose_model_dimension` is the CellPose model to run, can do either `2D` or `3D`
+`--cellpose_model_dimension` is the CellPose model to run, can do either `2D` or `3D`
 
 ## Usage Example
 
